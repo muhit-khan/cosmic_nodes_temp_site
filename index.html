@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Nodes - Coding For The Universe</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <nav class="glass-nav">
+        <div class="logo">
+            <img src="./assets/LOGO-white.png" alt="Cosmic Nodes Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Transforming Ideas into<br>Digital Reality</h1>
+            <p class="tagline">Where Innovation Meets Excellence in Technology</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="cta-primary">Start Your Project</a>
+                <a href="#services" class="cta-secondary">Explore Services</a>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <p>Scroll to explore</p>
+            </div>
+        </div>
+        <div class="floating-elements">
+            <div class="float-1"></div>
+            <div class="float-2"></div>
+            <div class="float-3"></div>
+        </div>
+    </header>
+
+    <section id="services" class="services">
+        <h2 data-aos="fade-up">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card glass" data-aos="zoom-in">
+                <i class="fas fa-globe"></i>
+                <h3>Web App Development</h3>
+                <p>Modern and responsive web applications built with cutting-edge technologies.</p>
+            </div>
+            <div class="service-card glass" data-aos="zoom-in">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile App Development</h3>
+                <p>Native mobile applications for iOS and Android platforms.</p>
+            </div>
+            <div class="service-card glass" data-aos="zoom-in">
+                <i class="fas fa-chart-line"></i>
+                <h3>Digital Marketing</h3>
+                <p>Data-driven digital marketing strategies for growth.</p>
+            </div>
+            <div class="service-card glass" data-aos="zoom-in">
+                <i class="fas fa-brain"></i>
+                <h3>AI & Business Intelligence</h3>
+                <p>Advanced AI and BI solutions for smart decision making.</p>
+            </div>
+            <div class="service-card glass" data-aos="zoom-in">
+                <i class="fas fa-laptop-code"></i>
+                <h3>IT Consulting</h3>
+                <p>Expert IT consulting services for digital transformation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact glass">
+        <h2 data-aos="fade-up">Get In Touch</h2>
+        <form data-aos="fade-up">
+            <div class="form-group">
+                <input type="text" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Message" required></textarea>
+            </div>
+            <button type="submit" class="cta-primary">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="glass">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="./assets/logo-white.png" alt="Cosmic Nodes Logo" class="footer-logo">
+                <p>Empowering businesses through innovative technology solutions</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> info@cosmicnodes.co</p>
+                <p><i class="fas fa-phone"></i> +880 1632436671</p>
+                <p><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</p>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="https://linkedin.com/company/cosmic-nodes" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://facebook.com/cosmic.nodes" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://instagram.com/cosmic_nodes" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Cosmic Nodes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./script.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+
+</html>
