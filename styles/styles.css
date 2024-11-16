@@ -396,7 +396,7 @@ footer {
     animation: scroll 2s infinite;
 }
 
-/* Cursor animation */
+/* Cursor animation
 .cursor {
     width: 30px;
     height: 30px;
@@ -406,7 +406,7 @@ footer {
     pointer-events: none;
     z-index: 9999;
     transform: translate(-50%, -50%);
-    transition: width 0.3s, height 0.3s, background-color 0.3s, transform 0.3s;
+    transition: width 0.3s, height 0.3s, background-color 0.3s;
     mix-blend-mode: difference;
 }
 
@@ -417,9 +417,9 @@ footer {
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
-    z-index: 10000;
+    z-index: 9999;
     transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s, transform 0.2s;
+    transition: width 0.2s, height 0.2s;
 }
 
 .cursor.hover {
@@ -441,3 +441,5 @@ button,
 .service-card {
     cursor: none;
 }
+
+*/

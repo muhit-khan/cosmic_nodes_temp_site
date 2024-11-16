@@ -29,16 +29,16 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
-// Cursor Animation
+// Update cursor animation in script.js
 const cursor = document.querySelector('.cursor');
 const cursorDot = document.querySelector('.cursor-dot');
-let isVisible = true;
+let isVisible = false;
 
-// Smooth cursor movement
-let cursorX = 0;
-let cursorY = 0;
-let dotX = 0;
-let dotY = 0;
+// Initial cursor positions
+let cursorX = -100;
+let cursorY = -100;
+let dotX = -100;
+let dotY = -100;
 
 document.addEventListener('mousemove', (e) => {
     if (!isVisible) {
@@ -47,30 +47,30 @@ document.addEventListener('mousemove', (e) => {
         isVisible = true;
     }
 
+    // Update target positions
     cursorX = e.clientX;
     cursorY = e.clientY;
 });
 
-// Smooth animation
+// Smooth animation function
 function animate() {
     // Smoothly move dot to cursor position
     const easingDot = 0.2;
     dotX += (cursorX - dotX) * easingDot;
     dotY += (cursorY - dotY) * easingDot;
 
-    // Smoothly move cursor to cursor position
-    const easingCursor = 0.1;
-    const cursorXSmooth = cursorX;
-    const cursorYSmooth = cursorY;
-
-    cursor.style.transform = `translate(${cursorXSmooth}px, ${cursorYSmooth}px)`;
+    // Update cursor position (follows immediately)
+    cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+    // Update dot position (follows smoothly)
     cursorDot.style.transform = `translate(${dotX}px, ${dotY}px)`;
 
     requestAnimationFrame(animate);
 }
+
+// Start animation
 animate();
 
-// Hover effects
+// Update hover effects
 const hoverElements = document.querySelectorAll('a, button, .service-card, input, textarea');
 hoverElements.forEach(element => {
     element.addEventListener('mouseenter', () => {
@@ -81,16 +81,7 @@ hoverElements.forEach(element => {
     });
 });
 
-// Click effect
-document.addEventListener('mousedown', () => {
-    cursor.classList.add('active');
-});
-
-document.addEventListener('mouseup', () => {
-    cursor.classList.remove('active');
-});
-
-// Hide cursor when leaving window
+// Update cursor visibility
 document.addEventListener('mouseleave', () => {
     cursor.style.opacity = '0';
     cursorDot.style.opacity = '0';
@@ -102,3 +93,6 @@ document.addEventListener('mouseenter', () => {
     cursorDot.style.opacity = '1';
     isVisible = true;
 });
+
+// Add cursor:none to all elements
+document.body.style.cursor = 'none';
